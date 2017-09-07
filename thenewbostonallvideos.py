@@ -44,6 +44,36 @@ for eachplayers in players[0:3]:
 for eachnumber in range(100,-51,-25):
 	print(eachnumber,end=", ") #print 100, 75, 50, 25, 0, -25, -50,
 print("\n")
-def functioname(number):
+
+def functionname(number=17):
 	return number+50
-print(functioname(150)) #print 200
+print(functionname(150)) #print 200
+print(functionname()) #print 67
+def functionname2(name="Raymond",action="jump", braincells=50000000, item="glue"):
+	print(name+" "+action+" "+item,braincells)
+functionname2(action="run") #print Raymond run glue 50000000
+functionname2(action="sleep", braincells=100000000) #print Raymond sleep glue 100000000
+def addnumbers(*numbers,ray="sunshine"):
+	total = 0
+	for a in numbers:
+		total += a
+	print(total)
+	print(ray)
+addnumbers(3, 32) #print 35\n sunshine
+addnumbers(-30, 30, 32, ray="moon") #print 32\n moon
+players = [29, 58, 66, 71, 87]
+addnumbers(*players) #print 311\n sunshine
+print("\n")
+
+groceryset = {"cereal","milk","starcrunch","beer","duct tape","lotion","beer"}
+print(groceryset) #print {'beer', 'starcrunch', 'milk', 'lotion', 'duct tape', 'cereal'}
+if "milk" in groceryset:
+	print("Yes I have milk")
+for eachgroceryset in groceryset:
+	print(eachgroceryset)
+classmatesdictionary = {"Tony":"cool but smells","Emma":"sits behind me","Lucy":"asks too many questions"}
+print(classmatesdictionary) #print {'Lucy': 'asks too many questions', 'Emma': 'sits behind me', 'Tony': 'cool but smells'}
+print(classmatesdictionary["Emma"]) #print sits behind me
+for key, value in classmatesdictionary.items():
+	print(key+" "+value) #print Lucy asks too many questions\n Tony cool but smells\n Emma sits behind me
+
